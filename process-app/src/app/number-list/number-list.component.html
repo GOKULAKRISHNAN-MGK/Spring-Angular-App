@@ -1,0 +1,20 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Number List</th>
+            <th scope="col">Odd Numbers</th>
+            <th scope="col">Even Numbers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let number of numbers">
+            <td>{{ number.numberList }}</td>
+            <td>{{ number.oddNumberList }}</td>
+            <td>{{ number.evenNumberList }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

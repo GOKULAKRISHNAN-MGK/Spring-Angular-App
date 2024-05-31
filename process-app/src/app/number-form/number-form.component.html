@@ -1,0 +1,18 @@
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #numberForm="ngForm">
+        <div class="form-group">
+          <label for="numberList">List of Number</label>
+          <input type="text" [(ngModel)]="number.numberList" 
+            class="form-control" 
+            id="numberList" 
+            name="numberList" 
+            placeholder="Enter Numbers Seperated by commas"
+            required #name="ngModel">
+        </div>
+        <button type="submit" [disabled]="!numberForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
+  

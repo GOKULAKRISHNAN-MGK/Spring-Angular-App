@@ -1,0 +1,7 @@
+io\mgk\processapp\transformer\NumberDetailsTransformer.class
+io\mgk\processapp\service\NumberDtlService.class
+io\mgk\processapp\ProcessorApplication.class
+io\mgk\processapp\controller\NumberDtlController.class
+io\mgk\processapp\DTO\NumberDetailsDTO.class
+io\mgk\processapp\repository\NumberDtlRepository.class
+io\mgk\processapp\model\NumberDetails.class
