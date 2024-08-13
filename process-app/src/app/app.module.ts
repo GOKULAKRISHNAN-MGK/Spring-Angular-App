@@ -8,12 +8,16 @@ import { NumberFormComponent } from './number-form/number-form.component';
 import { NumberService } from './number.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './number-list/search.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NumberListComponent,
-    NumberFormComponent
+    NumberFormComponent,
+    SearchPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

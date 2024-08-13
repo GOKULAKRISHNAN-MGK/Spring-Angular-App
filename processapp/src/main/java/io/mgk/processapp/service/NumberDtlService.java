@@ -23,7 +23,7 @@ public class NumberDtlService {
     }
 
     public void processAndSaveNum(NumberDetailsDTO numberDetailsDTO) {
-        Stream.of(numberDetailsDTO.getNumberList().split(",")).map(Integer::parseInt)
+        Stream.of(numberDetailsDTO.getNumberList().split(",")).map(String::trim).map(Integer::parseInt)
                 .collect(Collectors.partitioningBy(n->n%2==0)).forEach((key, value)->{
             if(key.equals(true)) {
                 numberDetailsDTO.setEvenNumberList(value.stream().map(Object::toString).collect(Collectors.joining(",","[","]")));

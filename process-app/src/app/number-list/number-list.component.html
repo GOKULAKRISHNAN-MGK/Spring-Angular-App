@@ -1,5 +1,8 @@
 <div class="card my-5">
     <div class="card-body">
+      <div class="searchBar">
+        <input type="text" name="search" id="search" placeholder="Search Number List...." [(ngModel)]="searchNumber">
+      </div>
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
           <tr>
@@ -9,8 +12,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let number of numbers">
-            <td>{{ number.numberList }}</td>
+          <tr *ngFor="let number of numbers | search: searchNumber">
+            <td appHighlight [searchNumber]="searchNumber" [content]="number.numberList"></td>
             <td>{{ number.oddNumberList }}</td>
             <td>{{ number.evenNumberList }}</td>
           </tr>

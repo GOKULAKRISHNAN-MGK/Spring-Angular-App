@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 import { Number } from '../number';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NumberService } from '../number.service';
@@ -21,7 +21,7 @@ export class NumberFormComponent {
   }
 
   onSubmit() {
-    this.numberService.save(this.number).subscribe(result=>this.goToNumberList())
+    this.numberService.save(this.number).subscribe(result=>this.goToNumberList());
   }
   goToNumberList() {
     this.router.navigate(['/getNumbers']);

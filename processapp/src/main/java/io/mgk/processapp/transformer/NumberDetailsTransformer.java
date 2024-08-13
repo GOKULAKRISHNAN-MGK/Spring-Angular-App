@@ -5,7 +5,9 @@ import io.mgk.processapp.model.NumberDetails;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class NumberDetailsTransformer {
@@ -23,7 +25,7 @@ public class NumberDetailsTransformer {
 
     public NumberDetails transformNumToNumDTO(NumberDetailsDTO numberDetailsDTO) {
         NumberDetails numberDetails = new NumberDetails();
-        numberDetails.setNumberList(numberDetailsDTO.getNumberList());
+        numberDetails.setNumberList(Arrays.stream(numberDetailsDTO.getNumberList().split(",")).map(String::trim).collect(Collectors.joining(",")));
         numberDetails.setOddNumberList(numberDetailsDTO.getOddNumberList());
         numberDetails.setEvenNumberList(numberDetailsDTO.getEvenNumberList());
         return numberDetails;

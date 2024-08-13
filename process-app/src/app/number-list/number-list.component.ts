@@ -8,6 +8,7 @@ import { NumberService } from '../number.service';
   styleUrl: './number-list.component.css'
 })
 export class NumberListComponent implements OnInit {
+  searchNumber: string = '';
   numbers!: Number[];
 
   constructor(private numberService: NumberService) {
